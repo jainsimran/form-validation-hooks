@@ -1,3 +1,7 @@
-.App {
-  display: table-caption;
+body input, div{
+  margin: 10px;
+}
+
+button{
+  text-align: center;
 }

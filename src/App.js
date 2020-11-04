@@ -56,33 +56,40 @@ function App() {
 
   return (
     <div className='App'>
-      <label>
-        Name
+      <div>
+        <label>
+          Name
         <input
-          type="text"
-          value={userInputName}
-          onChange={onNameChange}
-        /> 
-        {isUserNameValid ? null : isFormSubmit ? <p>Enter valid name</p> : null}
-      </label>
-      <label> 
-        Phone number
+            type="text"
+            value={userInputName}
+            onChange={onNameChange}
+          />
+          {isUserNameValid ? null : isFormSubmit ? <p>Enter valid name</p> : null}
+        </label>
+      </div>
+      <div>
+        <label>
+          Phone number
         <input
-          type="number"
-          value={userInputNumber}
-          onChange={onNumberChange}
-        /> 
-        {isUserNumValid ? null : isFormSubmit ? <p>Enter valid phone number</p> : null}
-      </label>
-      <label>
-        Email
+            type="number"
+            value={userInputNumber}
+            onChange={onNumberChange}
+          />
+          {isUserNumValid ? null : isFormSubmit ? <p>Enter valid phone number</p> : null}
+        </label>
+     </div>
+      <div>
+        <label>
+          Email
         <input
-          type="email"
-          value={userInputEmail}
-          onChange={onEmailChange}
-        /> 
-        {isUserEmailValid ? null : isFormSubmit ? <p>Enter valid email</p> : null}
-      </label>
+            type="email"
+            value={userInputEmail}
+            onChange={onEmailChange}
+          />
+          {isUserEmailValid ? null : isFormSubmit ? <p>Enter valid email</p> : null}
+        </label>
+      </div>
+      
       <button type='submit' onClick={onSubmit}> Submit </button>
       
       {isUserNameValid && isUserNumValid && isUserEmailValid && setIsFormSubmit ? <h1> This form is submited</h1> : null}
